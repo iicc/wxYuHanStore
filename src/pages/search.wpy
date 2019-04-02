@@ -1,8 +1,8 @@
 <template>
   <view class="container">
     <search @searchValue.user="doSearch"></search>
+    <filterBar wx:if="{{list.length>0||skuval !==''}}" @currentType.user="currentType"></filterBar>
     <view wx:if="{{list.length>0}}">
-      <filterBar @currentType.user="currentType"></filterBar>
       <!--矩阵商品列表模块-->
       <shopGridList :purchasetype.sync="purchasetype" :list.sync="list"></shopGridList>
       <!--加载更多时动画-->
@@ -27,18 +27,18 @@
 
 <script>
   import wepy from 'wepy';
-  import api from '../api/api';
-  import tip from '../utils/tip'
+  import api from '@/api/api';
+  import tip from '@/utils/tip'
   import {
     SYSTEM_INFO,
     USER_SPECICAL_INFO
-  } from '../utils/constant';
-  import Searchs from '../components/search'
+  } from '@/utils/constant';
+  import Searchs from '@/components/search'
   import FilterBar from "../components/filter_bar"
-  import ShopGridList from '../components/shop_grid_list'
+  import ShopGridList from '@/components/shop_grid_list'
   import BottomLoadMore from "../components/common/bottomLoadMore"
   import Placeholder from "../components/common/placeholder"
-  import FilterSlider from '../components/filterSlider'
+  import FilterSlider from '@/components/filterSlider'
   export default class Search extends wepy.page {
     config = {
       navigationBarTitleText: '搜索',

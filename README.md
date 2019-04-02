@@ -1,22 +1,27 @@
 ### 安装（更新） wepy 命令行工具。
-	cnpm install wepy-cli -g
+	npm install wepy-cli -g
 
 ### 安装依赖包
-	cnpm install
+	npm install
 
 ### 开发实时编译。
 	npm run dev
 
-### 生产
-	npm run build
+### 生产压缩
+	npm run build //上传代码时，请先执行此命令，否则会提示包体积过大
 
-### 开发使用说明
 
-使用微信开发者工具新建项目，本地开发选择dist目录。
+### 开发使用说明(重要)
 
-微信开发者工具 --> 项目 --> 关闭ES6转ES5。
+1、使用微信开发者工具-->添加项目，项目目录请选择dist目录。
 
-本地项目根目录运行npm run dev，开启实时编译。
+2、微信开发者工具-->项目-->关闭ES6转ES5。 <font color=red>重要：漏掉此项会运行报错。</font> 
+
+3、微信开发者工具-->项目-->关闭上传代码时样式自动补全。  <font color=red>重要：某些情况下漏掉此项也会运行报错。</font> 
+
+4、微信开发者工具-->项目-->关闭代码压缩上传。  <font color=red>重要：开启后，会导致真机computed, props.sync 等等属性失效。</font> 
+
+
 
 ### wepy开发文档地址
 	https://tencent.github.io/wepy/
@@ -140,4 +145,12 @@
 
 ### 说明
 
-此小程序借助于wepy进行高度的组件封装，非商用，仅供学习参考。喜欢就动手点个start吧~^o^~
+此小程序借助于wepy进行高度的组件封装，仅供学习参考。喜欢就动手点个star吧~^o^~
+
+### 如需合作请加
+qq:490844594  微信:dyq088
+
+ ### 友情赞助
+ 如果本项目对你有较大的帮助，可以对我打赏，否则不需要，随便放个二维码，看看有没有对我特别好的小伙伴 ~ 哈哈 
+<img src="https://github.com/dyq086/wxYuHanStore/blob/master/screenshots/WechatIMG276.jpg" width="400" height="400"/> 
+
